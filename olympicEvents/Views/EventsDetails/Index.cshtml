@@ -1,0 +1,52 @@
+﻿@model IEnumerable<olympicEvents.Models.EventsDetail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Top 2 Players Of All Time</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Event.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age_InYears)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td style="text-align:center;">
+            @Html.DisplayFor(modelItem => item.Age_InYears)
+        </td>
+        <td style="min-width:69px;">
+            @Html.ActionLink("Edit", "Edit", new { id=item.event_detailID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.event_detailID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.event_detailID })
+        </td>
+    </tr>
+}
+
+</table>

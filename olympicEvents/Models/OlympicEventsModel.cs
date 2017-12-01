@@ -8,7 +8,7 @@ namespace olympicEvents.Models
     public partial class OlympicEventsModel : DbContext
     {
         public OlympicEventsModel()
-            : base("name=OlympicEventsModelConn")
+            : base("name=DefaultConnection")
         {
         }
 

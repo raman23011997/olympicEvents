@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Games In the Olympic</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -32,10 +32,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
-        <td style="text-align:center;">
+        <td>
             @Html.DisplayFor(modelItem => item.Participation_Percent)
         </td>
-        <td style="min-width:69px;">
+        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.eventID }) |
             @Html.ActionLink("Details", "Details", new { id=item.eventID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.eventID })

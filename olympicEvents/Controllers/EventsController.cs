@@ -17,7 +17,7 @@ namespace olympicEvents.Controllers
         // GET: Events
         public ActionResult Index()
         {
-            return View(db.Events.OrderBy(e => e.Name).ToList());
+            return View(db.Events.ToList());
         }
 
         // GET: Events/Details/5
